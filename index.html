@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--Purav Sidhu 200555445 assigngment
+meta tags for charset, veiwport so that the webpage appears well on any device
+linking a css file and a adding an icon to the webpage-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" href="images/pizza.png" type="image/x-icon">  
+    <title>SIDHU's Pizza order form</title>
+</head>
+<body>
+    <header><!--adding an image using img-->
+        <img src="images/OIP.jpeg" width="50%" height="100%" id="img">
+        <h1>welcome to Sidhu's pizza shop</h1>
+    </header>
+    <main>
+    <h3>please select your order </h3>
+<!--creating a form using form attribuite-->
+    <form action="" method=""> 
+    <input type="hidden" name="customer info" value="1" />
+    <div class="ci">
+        <!--collecting the contact info of the customer-->
+        <fieldset id="contactinfo">
+            <legend style="font-size: larger;"><strong>Contact Information</strong></legend>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="Name"><br><br>   
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="Address"><br><br>
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="Phone"><br><br>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="Email">
+    </fieldset>
+    </div>
+    <!--reciving the order of the customer-->
+    <fieldset id="orderinfo">
+        <legend style="font-size: larger;"><strong>Order</strong></legend>
+        <fieldset id="pizzasize">
+            <legend>Pizza Size</legend>
+            <!--to select the size of the pizza to be ordered using input and label-->
+                <input type="radio" id="smallsize" name="Size_rg" value="12">
+                <label for="smallsize">Small 12"- 6 slices</label>
+                <br>
+                <input type="radio" id="mediumsize" name="Size_rg" value="14">  
+                <label for="mediumsize">Medium 14"- 8 slices</label>
+                <br>
+                <input type="radio" id="largesize" name="Size_rg" value="16"> 
+                <label for="largesize">Large 16"- 10 slices</label>
+                <br>
+                <input type="radio" id="XLlargesize" name="Size_rg" value="18"> 
+                <label for="XLlargesize">Large 18"- 12 slices</label>
+                <br>
+                <input type="radio" id="largesize" name="Size_rg" value="20"> 
+                <label for="Partysizesize">Party size- 20 slices</label>
+        </fieldset>
+        <fieldset id="quantity">
+            <!--using input text to select the quantity of the pizza to be ordered-->
+            <legend>Quantity</legend>
+                <input type="text" id="quantity" name="quantity" placeholder="Quantity">
+        </fieldset>
+        <fieldset id="mode">
+            <legend>MODE</legend>
+            <!--using option tag to know how would the customer would like recieve the pizza-->
+            <select name="mode" id="pizza" multiple>
+                <option value="to">Take out</option>
+                <option value="de">Delivery</option>
+                <option value="eg">EAT-IN-G</option>
+              </select>
+        </fieldset>
+        <fieldset id="crust">
+            <legend>Crust</legend>
+            <!--input for how the customer would like the pizza-->
+            <input type="checkbox" id="ld" name="ld" value="yes">
+            <label for="ld">Lightly Done</label><br>
+            <input type="checkbox" id="rd" name="rd" value="yes">
+            <label for="rd">Regularly Done</label><br>
+            <input type="checkbox" id="wd" name="wd" value="yes">
+            <label for="wd">Well Done</label><br>
+            <input type="checkbox" id="cr" name="cr" value="yes">
+            <label for="cr">Cauliflower Crust</label><br>
+            <input type="checkbox" id="kr" name="kr" value="yes">
+            <label for="kr">Keto Crust</label><br>
+        </fieldset>
+        <fieldset id="toppingbox">
+            <!--creating a topping box seperately as veg and non veg for customers-->
+            <legend>Topping(s)</legend>
+            <fieldset id="toppingbox1">
+                <legend>VEG Toppings</legend>
+                <input type="checkbox" id="anchovies" name="Anchovies_cb">
+                <label for="anchovies">Anchovies</label><br>
+                <input type="checkbox" id="doublecheese" name="DoubleCheese_cb">
+                <label for="doublecheese">Double Cheese</label><br>
+                <input type="checkbox" id="mushrooms" name="Mushroom_cb">
+                <label for="mushrooms">Mushrooms</label><br>
+                <input type="checkbox" id="greenpeppers" name="greenpeppers">
+                <label for="greenpeppers">Green peppers</label><br>
+                <input type="checkbox" id="greenolives" name="greenolives">
+                <label for="greenolives">Green olives</label><br>
+                <input type="checkbox" id="blackolives" name="blackolives">
+                <label for="blackolives">Black olives</label><br>
+                <input type="checkbox" id="hotbananapeppers" name="hotbananapeppers">
+                <label for="hotbananapeppers">Hot Banana Peppers</label><br>
+                <input type="checkbox" id="redpeppers" name="redpeppers">
+                <label for="redpeppers">Fire Roasted Red Peppers</label><br>
+                <input type="checkbox" id="tomatoes" name="tomatoes">
+                <label for="tomatoes">Roma Tomatoes</label><br>
+            </fieldset>    
+            <fieldset id="toppingbox2">
+                <legend>MEAT</legend>
+                <label for="baconcrumbles">Bacon Crumbles</label><br>
+                <input type="checkbox" id="baconstrips" name="baconstrips">
+                <label for="baconstrips">Bacon Strips</label><br>
+                <input type="checkbox" id="pepperoni" name="Pepperoni_cb">
+                <label for="pepperoni">Pepperoni</label><br>
+                <input type="checkbox" id="ham" name="ham">
+                <label for="ham">Italian Ham</label><br>
+                <input type="checkbox" id="sausage" name="sausage">
+                <label for="sausage">Sausage</label><br>
+                <input type="checkbox" id="ham" name="ham">
+                <label for="ham">Italian Ham</label><br>
+                <input type="checkbox" id="chicken" name="chicken">
+                <label for="chicken">Grilled Chicken</label><br>
+                <input type="checkbox" id="ny" name="ny">
+                <label for="ny">NY Pepperoni</label><br>
+                <input type="checkbox" id="beef" name="beef">
+                <label for="beef">Ground Beef</label><br>
+            </fieldset>
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <!--crearting a drinks menu for the customer-->
+        <legend>Drinks</legend>
+        <label><img src="images/coca cola.jpeg" width="5%">COCA COLA (Quantity)</label>
+        <input type="text" id="cc" name="coke">
+        <label><img src="images/sprite.png" width="5%">SPRITE (Quantity)</label>
+        <input type="text" id="s" name="sprite"><br>
+        <label><img src="images/f.jpeg" width="5%">Fanta (Quantity)</label>
+        <input type="text" id="f" name="fanta">
+        <label><img src="images/cd.jpeg" width="5%">CANADA DRY (Quantity)</label>
+        <input type="text" id="cd" name="dry"><br>
+        <label><img src="images/n.jpeg" width="5%">NESTEA (Quantity)</label>
+        <input type="text" id="b" name="nestea">
+    </fieldset>
+    <fieldset>
+        <!--creating a dips menu for the user-->
+        <legend>Dipingss</legend>
+        <img src="images/dips.jpeg" width="10%"><br>
+        <label>Creamy Garlic (Quantity)</label>
+        <input type="text" id="cg" name="cg"><br>
+        <label>TEXAS BBQ (Quantity)</label>
+        <input type="text" id="bbq" name="bbq"><br>
+        <label>Hot Sauce (Quantity)</label>
+        <input type="text" id="hs" name="hs"><br>
+        <label>Cheddar (Quantity)</label>
+        <input type="text" id="cd" name="dry"><br>
+        <label>Creamy Dill (Quantity)</label>
+        <input type="text" id="crd" name="crd">
+    </fieldset>
+
+    <fieldset id="instructions">
+        <!-- creating a textbox using text area so the customer can specify some special instructions like using a clean cutter etc-->
+        <legend>Special Instructions</legend>
+            <textarea id="textarea" name="instructions" rows="5" cols="50" placeholder="Enter your message here!(special requests, delivery details, etc.)"></textarea>
+    </fieldset> 
+    </fieldset>
+    <!--creating 2 buttons a submit and a reset button for the user--> 
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+    </form>
+    </main>
+    <footer>
+    <h4>we hope that you were satisfied with our serices and we would love to see you again at sidhu's pizza shop</h4>  
+    <!--a link so that the customer can go to the top of the webpage-->
+    <h3><a href=#img>Back to the top</a></h3>
+    </footer>  
+</body>
+</html>
