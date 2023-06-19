@@ -8,15 +8,87 @@ linking a css file and a adding an icon to the webpage-->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="shortcut icon" href="images/pizza.png" type="image/x-icon">  
     <title>SIDHU's Pizza order form</title>
+    <!--style>
+        body {
+          margin: 0;
+          padding: 0;
+        }
+    
+        .container {
+      position: relative;
+      padding: 20px;
+      z-index: 1; /* Ensure the container appears on top of the background */
+    }
+
+    .container::before {
+      content: "";
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(images/OIP.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 10; /* Adjust the opacity value to control the fading effect */
+      z-index: -1; /* Place the image below the container */
+    }
+      </style-->
+    <style>
+        .ci{
+            background-image: url(images/smw.jpg);
+            background-size: cover;
+            background-position: 50% 20%;
+        }
+        .ci2{
+            background-image: url(images/smw.jpg);
+            background-size: cover;
+            background-position: 50% 30%;
+        }
+        body{
+            background-color: black;
+        }
+        input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: black; /* Replace with your desired background color */
+        color: #fff; /* Replace with your desired text color */
+        }
+        input[type="email"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: black; /* Replace with your desired background color */
+        color: #fff; /* Replace with your desired text color */
+        }
+        textarea{
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: black; /* Replace with your desired background color */
+        color: #fff; /* Replace with your desired text color */
+        }
+        option{
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: black; /* Replace with your desired background color */
+        color: #fff; /* Replace with your desired text color */
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
     <header><!--adding an image using img-->
         <img src="images/OIP.jpeg" width="50%" height="100%" id="img">
-        <h1>welcome to Sidhu's pizza shop</h1>
+        <h1>welcome to Sidhu's pizza shop <img src="images/wel.jpeg" width="5%" height="5%"></h1>
+        
     </header>
     <main>
     <h3>please select your order </h3>
 <!--creating a form using form attribuite-->
+
     <form action="" method=""> 
     <input type="hidden" name="customer info" value="1" />
     <div class="ci">
@@ -32,7 +104,8 @@ linking a css file and a adding an icon to the webpage-->
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="Email">
     </fieldset>
-    </div>
+    
+    
     <!--reciving the order of the customer-->
     <fieldset id="orderinfo">
         <legend style="font-size: larger;"><strong>Order</strong></legend>
@@ -127,6 +200,7 @@ linking a css file and a adding an icon to the webpage-->
                 <label for="beef">Ground Beef</label><br>
             </fieldset>
         </fieldset>
+    
     </fieldset>
     <fieldset>
         <!--crearting a drinks menu for the customer-->
@@ -173,6 +247,6 @@ linking a css file and a adding an icon to the webpage-->
     <h4>we hope that you were satisfied with our serices and we would love to see you again at sidhu's pizza shop</h4>  
     <!--a link so that the customer can go to the top of the webpage-->
     <h3><a href=#img>Back to the top</a></h3>
-    </footer>  
+    </footer></div>
 </body>
 </html>
